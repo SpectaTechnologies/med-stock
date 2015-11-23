@@ -18,7 +18,7 @@ angular.module('app')
     })
 
     .state('app.login',{
-        url: '/login',
+        url: 'login',
         views: {
             'header': {
                 templateUrl: '/nav.html'
@@ -41,6 +41,16 @@ angular.module('app')
         }
  
     })
+
+     .state('app.products', {
+        url: 'products',
+        views: {
+            'content@': {
+                templateUrl: 'products/products.html'                
+            }
+        }
+ 
+    })
  
     .state('app.home', {
         url: 'home',
@@ -53,40 +63,9 @@ angular.module('app')
  
     })
 
-     .state('app.home.vehicles', {
-        url: '/vehicles/new',
-        views: {
-            'content@': {
-                templateUrl: 'vehicles/newVehicle.html',
-                controller: 'VehiclesNewInfoCtrl'
-            }
-        }
- 
-    })
+    
 
-     .state('app.home.details', {
-        url: '/vehicles/:id',        
- 
-        views: {
-            'content@': {
-                templateUrl: 'vehicles/editVehicle.html',
-                controller: 'VehiclesEditInfoCtrl'        
-            }
-        }
- 
-    })
-
-     .state('app.home.map', {
-        url: '/vehicles/map/:id',        
- 
-        views: {
-            'content@': {
-                templateUrl: 'vehicles/mapVehicle.html',
-                controller: 'VehiclesEditMapCtrl'        
-            }
-        }
- 
-    })
+     
 
 
     
