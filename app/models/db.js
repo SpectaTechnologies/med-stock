@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://admin:admin@ds053954.mongolab.com:53954/heroku_krgxbkw9', function() {
+mongoose.connect('mongodb://admin:admin@ds057204.mongolab.com:57204/heroku_12zn8pjr', function() {
     console.log('mongodb connected');
 })
 mongoose.connection.on('open', function(ref) {
