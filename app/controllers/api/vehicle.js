@@ -1,6 +1,6 @@
 var router = require('express').Router()
 var Vehicle = require('../../models/vehicle')
-var Location = require('../../models/location')
+var Location = require('../../models/products')
 var config = require('../../../config')
 
 

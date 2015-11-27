@@ -8,11 +8,4 @@ mongoose.connection.on('open', function(ref) {
 
 module.exports = mongoose;
 
-/*var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/trail_tracker',function(){
-	console.log('mongodb connected');
-})
 
-module.exports = mongoose;
-
-*/
