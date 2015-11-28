@@ -4,11 +4,11 @@
             <a class="navbar-brand" href="/">SanePharma</a>
         </div>
         <ul class="nav navbar-nav">
-            <li ui-sref-active="active"><a ui-sref=".home">Dashboard</a></li>
+            <li ng-if="currentUser" ui-sref-active="active"><a ui-sref=".home">Dashboard</a></li>
             <li ui-sref-active="active"><a ui-sref=".login">Login</a></li>            
         </ul>
-        <div>
-            <ul class="nav navbar-nav navbar-right">                
+        <div>        
+            <ul class="nav navbar-nav navbar-right" ng-if="currentUser" >                
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  ui-sref=".products">Products</a>
                     <ul class="dropdown-menu">
                         <li><a href="/products/add-products">Add Product</a></li>

@@ -75,6 +75,18 @@ angular.module('app')
 
         })
 
+          .state('app.products.new', {
+            url: '/products/new',
+            views: {
+                'content@': {
+                    templateUrl: 'products/newProduct.html',
+                    controller: 'VehiclesNewInfoCtrl'
+                }
+            }
+
+        })
+
+
 
     });
 
