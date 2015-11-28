@@ -27,7 +27,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="product in model">
+            <tr ng-repeat="product in model | filter:searchProducts">
                 <td>{{product.product_code}}</td>
                 <td>{{product.product_name}}</td>
                 <td>{{product.product_packing}}</td>
