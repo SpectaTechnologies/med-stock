@@ -1,0 +1,72 @@
+<nav class="navbar navbar-inverse " role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">SanePharma</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li ng-if="currentUser" ui-sref-active="active"><a ui-sref=".home">Dashboard</a></li>
+            <li ui-sref-active="active"><a ui-sref=".login">Login</a></li>            
+        </ul>
+        <div>        
+            <ul class="nav navbar-nav navbar-right" ng-if="currentUser" >                
+                <li><a ui-sref=".products">Products</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Party</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/company/add-company">Add company</a></li>
+                        <li><a href="/stockist/add-stockist">Add Stockist</a></li>
+                        <li><a href="/employee/add-employee">Add Employee</a></li>
+                        <li><a href="#">Search</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Sales</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Invoice Entry</a></li>
+                        <li><a href="#">Create Bill Header</a></li>
+                        <li><a href="#">Sales/Market Return</a></li>
+                        <li><a href="#">Customer Wise Sales Return</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Purchase</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/purchase/purchase-entry">Purchase Entry</a></li>
+                        <li><a href="#">Purchase Book</a></li>
+                        <li><a href="#">Product Wise purchase</a></li>
+                        <li><a href="#">Credit Note Entry</a></li>
+                        <li><a href="#">Debit Note Entry</a></li>
+                        <li><a href="#">Search</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Reports</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Print Stock Ledger</a></li>
+                        <li><a href="#">Print A/C ledger</a></li>
+                        <li><a href="#">Outstandings</a></li>
+                        <li><a href="#">Statements</a></li>
+                        <li><a href="#">Payment Reminder</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Accounts</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Vouchers Entry</a></li>
+                        <li><a href="#">Voucher Register</a></li>
+                        <li><a href="#">Datewise Balance</a></li>
+                        <li><a href="#">Write Voucher From Sale</a></li>
+                        <li><a href="#">Write Voucher From Purchase</a></li>
+                        <li><a href="#">Double Column Cashbook</a></li>
+                        <li><a href="#">Enter Old Outstanding</a></li>
+                        <li><a href="#">Payment Register</a></li>
+                        <li><a href="#">Correct Outstanding</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Change Password</a></li>
+                        <li><a href="#">Report A Bug</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li data-toggle="modal" data-target="#myModal2"><a href="#">About</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

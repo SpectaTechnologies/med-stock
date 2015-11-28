@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-offset-8 col-md-offest-8 col-sm-4 col-md-4 ">
+            <input type="text" class="form-control input-sm" ng-model="searchProducts" placeholder="Search Products" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <a class="btn btn-primary btn-sm pull-left" ui-sref=".new">+ Add New Product</a>
+        </div>
+        <br/><br/>
+    </div>
+    <table class="table table-hover table-striped table-bordered ">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Packing</th>
+                <th>Company</th>
+                <th>Sales Tas</th>
+                <th>Discount</th>
+                <th>Box Size</th>
+                <th>Purchase As</th>
+                <th>M.R.P</th>
+                <th>Added On</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="product in model">
+                <td>{{product.product_code}}</td>
+                <td>{{product.product_name}}</td>
+                <td>{{product.product_packing}}</td>
+                <td>{{product.product_company}}</td>
+                <td>{{product.product_salestax}}</td>
+                <td>{{product.product_discount}}</td>
+                <td>{{product.product_boxsize}}</td>
+                <td>{{product.product_purchase}}</td>
+                <td>{{product.product_mrp}}</td>
+                <td>{{product.date}}</td>
+                
+                <td><a class="btn btn-default" ui-sref=".details({id:value.device_id})">Edit</a></td>
+        </tbody>
+    </table>
+</div>
+
