@@ -1,37 +1,54 @@
 <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="page-header">
+                <h3>Add New Product</h3>
+            </div>
+        </div>
+    </div>
     <div class="top-buffer row">
         <div class="col-md-4">
-            Product code:
-            <input type="text" ng-model="dev_id" placeholder="Product Code " class="form-control" autofocus>
+            <input type="text" ng-model="product_code" placeholder="Product Code" class="form-control">
         </div>
         <div class="col-md-4">
-            Product Name
-            <input type="text" ng-model="dev_id" placeholder="Product Name" class="form-control" autofocus>
+            <input type="text" ng-model="product_name" placeholder="Product Name" class="form-control">
         </div>
         <div class="col-md-4">
-            Packing
-            <input type="text" ng-model="dev_id" placeholder="Packing" class="form-control" autofocus>
+            <input type="text" ng-model="product_packing" placeholder="Packing" class="form-control">
         </div>
     </div>
     <div class="top-buffer row">
-        <div class="col-md-12">
-            <input type="text" ng-model="v_number" placeholder="Vehicle Number" class="form-control">
+        <div class="col-md-4">
+            <input type="text" ng-model="product_company" placeholder="Company" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="product_salestax" placeholder="Sales Tax As" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="product_discount" placeholder="Purchsae Discount" class="form-control">
         </div>
     </div>
     <div class="top-buffer row">
-        <div class="col-md-12">
-            <input type="text" ng-model="driver_name" placeholder="Driver Name" class="form-control">
+        <div class="col-md-4">
+            <input type="text" ng-model="product_boxsize" placeholder="Box/Case Size" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="product_purchase" placeholder="Purchase As" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="product_mrp" placeholder="Maximum Retail Price" class="form-control">
         </div>
     </div>
     <div class="top-buffer row">
-        <div class="col-md-12">
-            <input type="text" ng-model="sos_number" placeholder="SOS contact" class="form-control">
+        <div class="col-md-offset-8 col-md-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary btn-block">Reset</button>
+                </div>
+                <div class="col-md-6">
+                    <button ng-click="saveProductDetails()" type="button" class="btn btn-success btn-block">Save</button>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="top-buffer row">
-        <div class="col-md-12">
-            <input type="button" ng-click="saveVehicleDetails()" value="Submit" class="btn btn-sm btn-success">
-        </div>
-    </div>
-    <br/>
 </div>

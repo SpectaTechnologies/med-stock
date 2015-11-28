@@ -19,6 +19,7 @@ app.use('/api/posts', require('./app/controllers/api/posts'))
 app.use('/api/users', require('./app/controllers/api/users'))
 app.use('/api/sessions', require('./app/controllers/api/sessions'))
 app.use('/api/vehicle', require('./app/controllers/api/vehicle'))
+app.use('/api/products', require('./app/controllers/api/products'))
 app.use('/', require('./app/controllers/static'))
 
 var port = process.env.PORT || 3000

@@ -69,7 +69,8 @@ angular.module('app')
             url: 'products',
             views: {
                 'content@': {
-                    templateUrl: 'products/products.html'
+                    templateUrl: 'products/products.html',
+                    controller: 'productsCtrl'
                 }
             }
 
@@ -80,7 +81,7 @@ angular.module('app')
             views: {
                 'content@': {
                     templateUrl: 'products/newProduct.html',
-                    controller: 'VehiclesNewInfoCtrl'
+                    controller: 'newProductCtrl'
                 }
             }
 

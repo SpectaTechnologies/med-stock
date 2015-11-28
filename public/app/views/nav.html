@@ -9,13 +9,7 @@
         </ul>
         <div>        
             <ul class="nav navbar-nav navbar-right" ng-if="currentUser" >                
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  ui-sref=".products">Products</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/products/add-products">Add Product</a></li>
-                        <li><a href="#">Update Product</a></li>
-                        <li><a href="/search-product">Search</a></li>
-                    </ul>
-                </li>
+                <li><a ui-sref=".products">Products</a></li>
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Party</a>
                     <ul class="dropdown-menu">
                         <li><a href="/company/add-company">Add company</a></li>

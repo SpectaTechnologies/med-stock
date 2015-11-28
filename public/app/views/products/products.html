@@ -22,19 +22,25 @@
                 <th>Box Size</th>
                 <th>Purchase As</th>
                 <th>M.R.P</th>
+                <th>Added On</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="value in model">
-                <td>{{value.device_id}}</td>
-                <td>{{value.vehicle_number}}</td>
-                <td>{{value.driver_name}}</td>
-                <td>
-                    <a type="button" class="btn btn-info" ui-sref=".map({id:value.device_id})"> <span class="glyphicon glyphicon-map-marker"></span> Locate</a>
-                </td>
-                <td><a type="button" class="btn btn-default" href="#" target="_blank"><span class="glyphicon glyphicon-warning-sign"></span>  2 Warnings </a></td>
-                <td>{{value.sos_number}}</td>
+            <tr ng-repeat="product in model">
+                <td>{{product.product_code}}</td>
+                <td>{{product.product_name}}</td>
+                <td>{{product.product_packing}}</td>
+                <td>{{product.product_company}}</td>
+                <td>{{product.product_salestax}}</td>
+                <td>{{product.product_discount}}</td>
+                <td>{{product.product_boxsize}}</td>
+                <td>{{product.product_purchase}}</td>
+                <td>{{product.product_mrp}}</td>
+                <td>{{product.date}}</td>
+                
                 <td><a class="btn btn-default" ui-sref=".details({id:value.device_id})">Edit</a></td>
         </tbody>
     </table>
 </div>
+
