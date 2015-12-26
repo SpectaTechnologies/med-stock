@@ -77,7 +77,7 @@ angular.module('app')
         })
 
           .state('app.products.new', {
-            url: '/products/new',
+            url: '/new',
             views: {
                 'content@': {
                     templateUrl: 'products/newProduct.html',
@@ -87,21 +87,30 @@ angular.module('app')
 
         })
 
+        .state('app.resources', {
+            url: 'resources/companies',
+            views: {
+                 'subheader@': {
+                        templateUrl: 'resources/subnav.html'
+                 },
+                'content@': {
+                    templateUrl: 'resources/companies.html'                    
+                }
+            }
+
+        })
+
+          .state('app.resources.new', {
+            url: '/new',
+            views: {
+                'content@': {
+                    templateUrl: 'resources/newCompany.html',
+                    controller: 'newProductCtrl'
+                }
+            }
+
+        })  
+
 
 
     });
-
-/*.config(function($routeProvider,$locationProvider) {
-    $routeProvider
-    .when('/',{controller:'LoginCtrl',templateUrl:'login.html'})    
-    .when('/posts',{controller:'PostsCtrl',templateUrl:'posts.html'})
-    .when('/register',{controller:'RegisterCtrl',templateUrl:'register.html'})
-    .when('/home',{controller:'HomeCtrl',templateUrl:'users/home.html'})    
-    .when('/vehicles/new/info',{controller:'VehiclesNewInfoCtrl',templateUrl:'vehicles/new/info.html'}) 
-    .when('/vehicles/edit/:deviceId/info',{controller:'VehiclesEditInfoCtrl',templateUrl:'vehicles/edit/info.html'})    
-    .when('/vehicles/edit/:deviceId/map',{controller:'VehiclesEditMapCtrl',templateUrl:'vehicles/edit/map.html'})   
-    .when('/401',{controller:'ErrorCtrl',templateUrl:'errors/401.html'})    
-
-    $locationProvider.html5Mode(true)
-    
-})*/
