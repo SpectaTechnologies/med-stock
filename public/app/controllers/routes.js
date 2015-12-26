@@ -76,7 +76,7 @@ angular.module('app')
 
         })
 
-          .state('app.products.new', {
+        .state('app.products.new', {
             url: '/new',
             views: {
                 'content@': {
@@ -90,9 +90,9 @@ angular.module('app')
         .state('app.resources', {
             url: 'resources/companies',
             views: {
-                 'subheader@': {
-                        templateUrl: 'resources/subnav.html'
-                 },
+                'subheader@': {
+                    templateUrl: 'resources/subnav.html'
+                },
                 'content@': {
                     templateUrl: 'resources/companies.html',
                     controller: 'companiesCtrl'
@@ -102,18 +102,29 @@ angular.module('app')
 
         })
 
-          .state('app.resources.new', {
+        .state('app.resources.new', {
             url: '/new',
             views: {
-                
+
                 'content@': {
                     templateUrl: 'resources/newCompany.html',
                     controller: 'newCompanyCtrl'
                 }
             }
 
-        })  
+        })
 
+
+        .state('app.settings', {
+            url: 'about',
+            views: {
+                'content@': {
+                    templateUrl: 'settings/about.html',
+                    controller: 'HomeCtrl'
+                }
+            }
+
+        })
 
 
     });
