@@ -94,7 +94,9 @@ angular.module('app')
                         templateUrl: 'resources/subnav.html'
                  },
                 'content@': {
-                    templateUrl: 'resources/companies.html'                    
+                    templateUrl: 'resources/companies.html',
+                    controller: 'companiesCtrl'
+
                 }
             }
 
@@ -103,9 +105,10 @@ angular.module('app')
           .state('app.resources.new', {
             url: '/new',
             views: {
+                
                 'content@': {
                     templateUrl: 'resources/newCompany.html',
-                    controller: 'newProductCtrl'
+                    controller: 'newCompanyCtrl'
                 }
             }
 

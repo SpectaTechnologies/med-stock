@@ -10,24 +10,21 @@
             <tr>
                 <th>Code</th>
                 <th>Name</th>
-                <th>Area Code</th>
-                <th>Address</th>
+                <th>Area Code</th>                
                 <th>Opening Balance</th>
                 <th>BST Code</th>                
+                <th>Date</th>                
+                <th>Edit</th>                
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="product in model | filter:searchProducts">
-                <td>{{product.product_code}}</td>
-                <td>{{product.product_name}}</td>
-                <td>{{product.product_packing}}</td>
-                <td>{{product.product_company}}</td>
-                <td>{{product.product_salestax}}</td>
-                <td>{{product.product_discount}}</td>
-                <td>{{product.product_boxsize}}</td>
-                <td>{{product.product_purchase}}</td>
-                <td>{{product.product_mrp}}</td>
-                <td>{{product.date}}</td>
+            <tr ng-repeat="company in model | filter:searchProducts">
+                <td>{{company.company_code}}</td>
+                <td>{{company.company_name}}</td>            
+                <td>{{company.company_areacode}}</td>            
+                <td>{{company.company_openingbalance}}</td>            
+                <td>{{company.company_bstcode}}</td>            
+                <td>{{company.date}}</td>
                 
                 <td><a class="btn btn-default" ui-sref=".details({id:value.device_id})">Edit</a></td>
         </tbody>
