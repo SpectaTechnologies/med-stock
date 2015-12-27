@@ -34,7 +34,7 @@ angular.module('app')
       {
         value: 100,
         color: '#FFFF00',
-        highlight: '#FFFF00',
+        highlight: '#e5e500',
         label: 'Yellow'
       }
     ];
