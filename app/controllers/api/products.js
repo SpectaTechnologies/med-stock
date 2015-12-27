@@ -58,13 +58,13 @@ router.get('/', function(req, res, next) {
 //Get details for a specific product id (SHOW)
 router.get('/:product_id', function(req, res, next) {
 
-    Vehicle.findOne({
-        device_id: req.params.vehicle_id
-    }, function(err, vehicle) {
+    Product.findOne({
+        device_id: req.params.product_id
+    }, function(err, product) {
         if (err) {
             return next(err)
         }
-        res.json(vehicle)
+        res.json(product)
     })
 
 
