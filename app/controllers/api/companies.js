@@ -43,10 +43,17 @@ router.get('/', function(req, res, next) {
     }, function(err, company) {
         if (err) {
             return next(err)
+        } else {
+            console.log("this is the user list of companies from Product GET: " + company)
+                //console.log(vehicle)
+            
+            Company.count({user_id: req.auth.username}, function(err, count) {
+                console.log("Count is :", count);
+
+            })
+            res.json(company)
         }
-        console.log("this is the user list of companies from Product GET: " + company)
-            //console.log(vehicle)
-        res.json(company)
+
     })
 
 
