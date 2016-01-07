@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="page-header">
+                <h3>Add New Employee</h3>
+            </div>
+        </div>
+    </div>
+    <div class="top-buffer row">
+        <div class="col-md-4">
+            <input type="text" ng-model="company_code" placeholder="Company Code" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="company_name" placeholder="Company Name" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="company_areacode" placeholder="Area Code" class="form-control">
+        </div>
+    </div>
+    <div class="top-buffer row">
+        <div class="col-md-4">
+            <input type="text" ng-model="company_address" placeholder="Address" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="company_openingbalance" placeholder="Opening Balance" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="company_bstcode" placeholder="BST Code" class="form-control">
+        </div>
+    </div>    
+    <div class="top-buffer row">
+        <div class="col-md-offset-8 col-md-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary btn-block">Reset</button>
+                </div>
+                <div class="col-md-6">
+                    <button ng-click="saveCompanyDetails()" type="button" class="btn btn-success btn-block"><span class="glyphicon glyphicon-floppy-disk"></span>  Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
