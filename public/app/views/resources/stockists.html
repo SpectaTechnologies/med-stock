@@ -1,0 +1,33 @@
+<div class="container">    
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <a class="btn btn-primary btn-sm pull-left" ui-sref=".new">+ Add New Stockist</a>
+        </div>
+        <br/><br/>
+    </div>
+    <table class="table table-hover table-striped table-bordered ">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Area Code</th>                
+                <th>Opening Balance</th>
+                <th>BST Code</th>                
+                <th>Date</th>                
+                <th>Edit</th>                
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="company in model | filter:searchProducts">
+                <td>{{company.company_code}}</td>
+                <td>{{company.company_name}}</td>            
+                <td>{{company.company_areacode}}</td>            
+                <td>{{company.company_openingbalance}}</td>            
+                <td>{{company.company_bstcode}}</td>            
+                <td>{{company.date}}</td>
+                
+                <td><a class="btn btn-default" ui-sref=".details({id:value.device_id})"><span class="glyphicon glyphicon-pencil"></span>  Edit</a></td>
+        </tbody>
+    </table>
+</div>
+
