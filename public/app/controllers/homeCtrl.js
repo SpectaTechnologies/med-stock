@@ -20,22 +20,22 @@ angular.module('app')
 
         $scope.data = [
       {
-        value: 300,
+        value: 50,
         color:'#F7464A',
         highlight: '#FF5A5E',
-        label: 'Red'
+        label: 'Companies'
       },
       {
-        value: 50,
+        value: 20,
         color: '#46BFBD',
         highlight: '#5AD3D1',
-        label: 'Green'
+        label: 'Products'
       },
       {
-        value: 100,
+        value: 6,
         color: '#FFFF00',
         highlight: '#e5e500',
-        label: 'Yellow'
+        label: 'Employees'
       }
     ];
 
