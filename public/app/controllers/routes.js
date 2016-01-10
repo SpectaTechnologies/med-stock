@@ -117,7 +117,7 @@ angular.module('app')
             views: {                
                 'content@': {
                     templateUrl: 'resources/stockists.html',
-                    controller: 'stockistCtrl'
+                    controller: 'stockistsCtrl'
 
                 }
             }
@@ -135,6 +135,32 @@ angular.module('app')
             }
 
         })
+
+
+        .state('app.employees', {
+            url: 'resources/employees',
+            views: {                
+                'content@': {
+                    templateUrl: 'resources/employees.html',
+                    controller: 'employeesCtrl'
+
+                }
+            }
+
+        })
+
+        .state('app.employees.new', {
+            url: '/new',
+            views: {
+
+                'content@': {
+                    templateUrl: 'resources/newEmployee.html',
+                    controller: 'newEmployeeCtrl'
+                }
+            }
+
+        })
+
 
 
         .state('app.settings', {
