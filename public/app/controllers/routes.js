@@ -191,6 +191,32 @@ angular.module('app')
 
         })
 
+        .state('app.salesreturn', {
+            url: 'sales/sales-return',
+            views: {                
+                'content@': {
+                    templateUrl: 'sales/salesReturn.html'
+                    
+
+                }
+            }
+
+        }) 
+
+
+        // Purchase Menu
+
+        .state('app.purchaseentry', {
+            url: 'sales/purchase-entry',
+            views: {                
+                'content@': {
+                    templateUrl: 'purchase/purchaseEntry.html'
+                    
+
+                }
+            }
+
+        })         
 
 
         .state('app.settings', {
