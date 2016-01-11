@@ -87,6 +87,8 @@ angular.module('app')
 
         })
 
+        //  Resources Menu 
+
         .state('app.companies', {
             url: 'resources/companies',
             views: {                
@@ -156,6 +158,34 @@ angular.module('app')
                 'content@': {
                     templateUrl: 'resources/newEmployee.html',
                     controller: 'newEmployeeCtrl'
+                }
+            }
+
+        })
+
+
+        //  Sales Menu 
+
+         .state('app.invoiceentry', {
+            url: 'sales/invoice-entry',
+            views: {                
+                'content@': {
+                    templateUrl: 'sales/invoiceEntry.html'
+                    
+
+                }
+            }
+
+        })
+
+
+         .state('app.billheader', {
+            url: 'sales/billheader',
+            views: {                
+                'content@': {
+                    templateUrl: 'sales/billHeader.html'
+                    
+
                 }
             }
 
