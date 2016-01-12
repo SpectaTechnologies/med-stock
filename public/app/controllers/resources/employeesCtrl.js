@@ -1,9 +1,9 @@
 angular.module('app')
-    .controller('stockistsCtrl', function($scope, $http) {
+    .controller('employeesCtrl', function($scope, $http) {
         
         $scope.setup = function() {
 
-            $http.get('/api/stockists')
+            $http.get('/api/employees')
                 .then(function(response) {
                     $scope.model = response.data;
 

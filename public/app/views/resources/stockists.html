@@ -18,13 +18,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="company in model | filter:searchProducts">
-                <td>{{company.company_code}}</td>
-                <td>{{company.company_name}}</td>            
-                <td>{{company.company_areacode}}</td>            
-                <td>{{company.company_openingbalance}}</td>            
-                <td>{{company.company_bstcode}}</td>            
-                <td>{{company.date}}</td>
+            <tr ng-repeat="stockist in model | filter:searchProducts">
+                <td>{{stockist.stockist_code}}</td>
+                <td>{{stockist.stockist_name}}</td>            
+                <td>{{stockist.stockist_areacode}}</td>            
+                <td>{{stockist.stockist_openingbalance}}</td>            
+                <td>{{stockist.stockist_bstcode}}</td>            
+                <td>{{stockist.date}}</td>
                 
                 <td><a class="btn btn-default" ui-sref=".details({id:value.device_id})"><span class="glyphicon glyphicon-pencil"></span>  Edit</a></td>
         </tbody>
