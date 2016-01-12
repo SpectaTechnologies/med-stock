@@ -4,8 +4,9 @@ angular.module('app')
 
         $scope.saveStockistDetails = function() {  
         console.log("Here in the Stockist controller") ;         
+        console.log($scope.stockist_code)
 
-            $http.post('/api/companies', {
+            $http.post('/api/stockists', {
                     stockist_code: $scope.stockist_code,
                     stockist_name: $scope.stockist_name,
                     stockist_areacode: $scope.stockist_areacode,

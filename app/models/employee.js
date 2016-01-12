@@ -1,30 +1,30 @@
 var db = require('./db')
-var stockist = db.Schema({    
+var employee = db.Schema({    
     user_id: {
         type: String,
         required: true
     },
-    stockist_code: {
+    employee_code: {
         type: String,
         
     },
-    stockist_name: {
+    employee_name: {
         type: String,
         
     },
-    stockist_areacode: {
+    employee_areacode: {
         type: String,
         
     },
-    stockist_address: {
+    employee_address: {
         type: String,
         
     },
-    stockist_openingbalance: {
+    employee_openingbalance: {
         type: String
     },
 
-    stockist_bstcode: {
+    employee_bstcode: {
         type: String
     },
 
@@ -35,4 +35,4 @@ var stockist = db.Schema({
     }
 })
 
-module.exports = db.model('stockist', stockist)
+module.exports = db.model('employee', employee)
