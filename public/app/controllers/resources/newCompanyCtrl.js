@@ -16,7 +16,7 @@ angular.module('app')
                 })
                 .then(function(response) {
                     console.log(response)
-                    $location.path('/resources')
+                    $location.path('/resources/companies')
 
                 }, function(response) {
                     console.log(response)
