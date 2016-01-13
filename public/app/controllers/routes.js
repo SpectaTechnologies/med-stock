@@ -1,5 +1,5 @@
 angular.module('app')
-    .config(function($stateProvider, $urlRouterProvider,$locationProvider) {
+    .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
         $urlRouterProvider.otherwise('/');
 
@@ -91,7 +91,7 @@ angular.module('app')
 
         .state('app.companies', {
             url: 'resources/companies',
-            views: {                
+            views: {
                 'content@': {
                     templateUrl: 'resources/companies.html',
                     controller: 'companiesCtrl'
@@ -113,10 +113,21 @@ angular.module('app')
 
         })
 
+        .state('app.companies.details', {
+            url: '/:id',
+
+            views: {
+                'content@': {
+                    templateUrl: 'resources/editCompany.html',
+                    controller: 'editCompanyCtrl'
+                }
+            }
+
+        })
 
         .state('app.stockists', {
             url: 'resources/stockists',
-            views: {                
+            views: {
                 'content@': {
                     templateUrl: 'resources/stockists.html',
                     controller: 'stockistsCtrl'
@@ -141,7 +152,7 @@ angular.module('app')
 
         .state('app.employees', {
             url: 'resources/employees',
-            views: {                
+            views: {
                 'content@': {
                     templateUrl: 'resources/employees.html',
                     controller: 'employeesCtrl'
@@ -166,12 +177,12 @@ angular.module('app')
 
         //  Sales Menu 
 
-         .state('app.invoiceentry', {
+        .state('app.invoiceentry', {
             url: 'sales/invoice-entry',
-            views: {                
+            views: {
                 'content@': {
                     templateUrl: 'sales/invoiceEntry.html'
-                    
+
 
                 }
             }
@@ -179,12 +190,12 @@ angular.module('app')
         })
 
 
-         .state('app.billheader', {
+        .state('app.billheader', {
             url: 'sales/billheader',
-            views: {                
+            views: {
                 'content@': {
                     templateUrl: 'sales/billHeader.html'
-                    
+
 
                 }
             }
@@ -193,30 +204,30 @@ angular.module('app')
 
         .state('app.salesreturn', {
             url: 'sales/sales-return',
-            views: {                
+            views: {
                 'content@': {
                     templateUrl: 'sales/salesReturn.html'
-                    
+
 
                 }
             }
 
-        }) 
+        })
 
 
         // Purchase Menu
 
         .state('app.purchaseentry', {
             url: 'sales/purchase-entry',
-            views: {                
+            views: {
                 'content@': {
                     templateUrl: 'purchase/purchaseEntry.html'
-                    
+
 
                 }
             }
 
-        })         
+        })
 
 
         .state('app.settings', {

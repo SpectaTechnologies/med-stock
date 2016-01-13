@@ -15,6 +15,7 @@
                 <th>BST Code</th>                
                 <th>Date</th>                
                 <th>Edit</th>                
+                <th>Delete</th>                
             </tr>
         </thead>
         <tbody>
@@ -26,7 +27,8 @@
                 <td>{{company.company_bstcode}}</td>            
                 <td>{{company.date}}</td>
                 
-                <td><a class="btn btn-default" ui-sref=".details({id:value.device_id})"><span class="glyphicon glyphicon-pencil"></span>  Edit</a></td>
+                <td><a  href="" ui-sref=".details({id:company._id})"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                <td><a  href="" ng-click="deleteCompany(company._id)"><span class="glyphicon glyphicon-trash"></span></a></td>
         </tbody>
     </table>
 </div>

@@ -17,6 +17,21 @@ angular.module('app')
         $scope.setup();
 
 
+        $scope.deleteCompany = function(company_id) {          
+            if (!confirm('Are you sure?')) return;
+            $http.delete('/api/companies/'+ company_id)
+                .then(function(response) {
+                    console.log(response)                    
+                    $scope.setup();
+
+                }, function(response) {
+                    console.log(response)
+                    // if error occurs
+                });
+
+        }
+
+
 
     })
 
