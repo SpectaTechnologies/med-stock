@@ -181,7 +181,8 @@ angular.module('app')
             url: 'sales/invoice-entry',
             views: {
                 'content@': {
-                    templateUrl: 'sales/invoiceEntry.html'
+                    templateUrl: 'sales/invoiceEntry.html',
+                    controller: 'invoiceEntryCtrl'
 
 
                 }

@@ -14,19 +14,28 @@
         <div class="col-xs-5">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4>To : ABC Pharmas Private Limited</h4>
+                    <h4>To :<input type="text" ng-model="selected" uib-typeahead="company.name for company in model.companies | filter:$viewValue" class="form-control"></h4>
                 </div>
                 <div class="panel-body">
                     <p>
                         Address
-                        <br> G26, Begusarai
-                        <br> Bihar
+                        <br>
+                        <br>{{company.address}}
                         <br>
                     </p>
                 </div>
             </div>
-        </div>        
+        </div>
+        <div class="col-xs-offset-4 col-xs-3">
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
     </div>
+    <input type="text" ng-model="product" uib-typeahead="product.code for product in model.products | filter:$viewValue" class="form-control">
     <!-- / end client details section -->
     <table class="table table-bordered">
         <thead>
@@ -54,7 +63,9 @@
         <tbody>
             <tr>
                 <td>1</td>
-                <td>Bistocol</td>
+                <td>
+                    <input type="text" ng-model="product1" uib-typeahead="product.code for product in model.products | filter:$viewValue" class="form-control">
+                </td>
                 <td></td>
                 <td class="text-right">-</td>
                 <td class="text-right"><span style='font-family:Arial;'>&#8377;</span>200.00</td>
@@ -62,7 +73,9 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td>Terizyme</td>
+                <td>
+                <input type="text" ng-model="product2" uib-typeahead="product.code for product in model.products | filter:$viewValue" class="form-control">
+                </td>
                 <td></td>
                 <td class="text-right">10</td>
                 <td class="text-right"><span style='font-family:Arial;'>&#8377;</span>75.00</td>
@@ -96,7 +109,7 @@
           </strong>
         </div>
     </div>
-   <!--  <div class="row">
+    <!--  <div class="row">
         <div class="col-xs-5">
             <div class="panel panel-info">
                 <div class="panel-heading">

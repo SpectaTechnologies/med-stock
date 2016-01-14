@@ -1,3 +1,3 @@
 angular.module('app',[
-'ngRoute','ui.router','tc.chartjs'
+'ngRoute','ui.router','tc.chartjs','ui.bootstrap'
 ])
