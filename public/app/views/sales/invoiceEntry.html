@@ -1,4 +1,5 @@
 <div class="container">
+
     <div class="row">
         <div class="col-xs-6">
             <h1>            
@@ -25,8 +26,17 @@
                     </p>
                 </div>
             </div>
-        </div>        
-    </div>
+        </div>
+        <div class="col-xs-offset-4 col-xs-3"> 
+            <p class="input-group">
+                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+    </div>    
+    <input type="text" ng-model="selected" uib-typeahead="state for state in model | filter:$viewValue | limitTo:8" class="form-control">
     <!-- / end client details section -->
     <table class="table table-bordered">
         <thead>
@@ -54,7 +64,7 @@
         <tbody>
             <tr>
                 <td>1</td>
-                <td>Bistocol</td>
+                <td contenteditable='true'>Bistocol</td>
                 <td></td>
                 <td class="text-right">-</td>
                 <td class="text-right"><span style='font-family:Arial;'>&#8377;</span>200.00</td>
@@ -62,7 +72,9 @@
             </tr>
             <tr>
                 <td>2</td>
-                <td>Terizyme</td>
+                <td>
+                    <input type="text" class="form-control input-sm" ng-model="searchText" placeholder="Search" uib-typeahead="t as t.name for t in availableProducts($viewValue)" typeahead-wait-ms="500">
+                </td>
                 <td></td>
                 <td class="text-right">10</td>
                 <td class="text-right"><span style='font-family:Arial;'>&#8377;</span>75.00</td>
@@ -96,7 +108,7 @@
           </strong>
         </div>
     </div>
-   <!--  <div class="row">
+    <!--  <div class="row">
         <div class="col-xs-5">
             <div class="panel panel-info">
                 <div class="panel-heading">
