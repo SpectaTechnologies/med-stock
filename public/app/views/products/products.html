@@ -12,6 +12,11 @@
         <br/>
     </div>
     <div class="row">
+        <div class="col-xs-offset-4 col-xs-4">
+            <div class="spinner" ng-show="loading">Loading <img src="/images/loading.gif"></div>
+        </div>
+    </div>
+    <div class="row" ng-show="!loading">
         <div class="col-xs-12">
             <table class="table table-hover table-striped table-bordered ">
                 <thead>
@@ -27,6 +32,7 @@
                         <th>M.R.P</th>
                         <th>Added On</th>
                         <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,7 +47,8 @@
                         <td>{{product.product_purchase}}</td>
                         <td>{{product.product_mrp}}</td>
                         <td>{{product.date}}</td>
-                        <td><a class="btn btn-default" ui-sref=".details({id:value.device_id})">Edit</a></td>
+                        <td><a href="" ui-sref=".details({id:product._id})"><span class="glyphicon glyphicon-pencil edit"></span></a></td>
+                        <td><a href="" ng-click="deleteCompany(product._id)"><span class="glyphicon glyphicon-trash delete"></span></a></td>
                 </tbody>
             </table>
         </div>

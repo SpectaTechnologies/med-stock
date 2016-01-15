@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="top-buffer row">
+        <div class="col-md-4">
+            <input type="text" ng-model="model.product_code" placeholder="Product Code" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="model.product_name" placeholder="Product Name" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="model.product_packing" placeholder="Packing" class="form-control">
+        </div>
+    </div>
+    <div class="top-buffer row">
+        <div class="col-md-4">
+            <input type="text" ng-model="model.product_company" placeholder="Company" uib-typeahead="company.name for company in companies | filter:$viewValue" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="model.product_salestax" placeholder="Sales Tax As" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="model.product_discount" placeholder="Purchsae Discount" class="form-control">
+        </div>
+    </div>
+    <div class="top-buffer row">
+        <div class="col-md-4">
+            <input type="text" ng-model="model.product_boxsize" placeholder="Box/Case Size" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="model.product_purchase" placeholder="Purchase As" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="model.product_mrp" placeholder="Maximum Retail Price" class="form-control">
+        </div>
+    </div>
+    <div class="top-buffer row">
+        <div class="col-md-offset-8 col-md-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary btn-block">Reset</button>
+                </div>
+                <div class="col-md-6">
+                    <button ng-click="updateProductDetails()" type="button" class="btn btn-success btn-block"><span class="glyphicon glyphicon-floppy-disk"></span> Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
