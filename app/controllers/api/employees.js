@@ -44,13 +44,7 @@ router.get('/', function(req, res, next) {
         if (err) {
             return next(err)
         } else {
-            console.log("this is the user list of employees from employee GET: " + employee)
-                //console.log(vehicle)
-            
-            /*employee.count({user_id: req.auth.username}, function(err, count) {
-                console.log("Count is :", count);
-
-            })*/
+            console.log("this is the user list of employees from employee GET: " + employee)             
             res.json(employee)
         }
 
@@ -59,5 +53,16 @@ router.get('/', function(req, res, next) {
 
 })
 
+router.get('/count', function(req, res, next) {
+
+    Employee.count({
+        user_id: req.auth.username
+    }, function(err, count) {
+        console.log("Count is :", count);
+        res.json(count)
+    })
+
+
+})
 
 module.exports = router

@@ -45,14 +45,7 @@ router.get('/', function(req, res, next) {
             return next(err)
         } else {
             console.log("this is the user list of companies from Product GET: " + company)
-                //console.log(vehicle)
 
-            Company.count({
-                user_id: req.auth.username
-            }, function(err, count) {
-                console.log("Count is :", count);
-
-            })
             res.json(company)
         }
 
@@ -60,6 +53,19 @@ router.get('/', function(req, res, next) {
 
 
 })
+
+router.get('/count', function(req, res, next) {
+
+    Company.count({
+        user_id: req.auth.username
+    }, function(err, count) {
+        console.log("Count is :", count);
+        res.json(count)
+    })
+
+
+})
+
 
 
 
@@ -116,12 +122,12 @@ router.delete('/:_id', function(req, res, next) {
             // handle error
         }
 
-        company.remove(function(err){
-            if(err){
+        company.remove(function(err) {
+            if (err) {
                 res.send(err)
             }
             res.json({
-                message : 'Company Deleted'
+                message: 'Company Deleted'
             })
         }); //Removes the document
     })
