@@ -18,7 +18,7 @@ router.post('/', function(req, res, next) {
         product_code: req.body.product_code,
         product_name: req.body.product_name,
         product_packing: req.body.product_packing,
-        product_product: req.body.product_company,
+        product_company: req.body.product_company,
         product_salestax: req.body.product_salestax,
         product_discount: req.body.product_discount,
         product_boxsize: req.body.product_boxsize,
