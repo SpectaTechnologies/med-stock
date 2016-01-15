@@ -18,7 +18,7 @@ router.post('/', function(req, res, next) {
         product_code: req.body.product_code,
         product_name: req.body.product_name,
         product_packing: req.body.product_packing,
-        product_company: req.body.product_company,
+        product_product: req.body.product_product,
         product_salestax: req.body.product_salestax,
         product_discount: req.body.product_discount,
         product_boxsize: req.body.product_boxsize,
@@ -56,10 +56,11 @@ router.get('/', function(req, res, next) {
 })
 
 //Get details for a specific product id (SHOW)
-router.get('/:product_id', function(req, res, next) {
+
+router.get('/:_id', function(req, res, next) {
 
     Product.findOne({
-        device_id: req.params.product_id
+        _id: req.params._id
     }, function(err, product) {
         if (err) {
             return next(err)
@@ -70,6 +71,57 @@ router.get('/:product_id', function(req, res, next) {
 
 })
 
+
+router.put('/:_id', function(req, res, next) {
+
+    Product.findById(req.params._id, function(err, product) {
+        if (err) {
+            return next(err)
+        }
+
+        product.user_id = req.auth.username,
+            product.product_code = req.body.product_code,
+            product.product_name = req.body.product_name,
+            product.product_areacode = req.body.product_areacode,
+            product.product_address = req.body.product_address,
+            product.product_openingbalance = req.body.product_openingbalance,
+            product.product_bstcode = req.body.product_bstcode
+
+
+        product.save(function(err) {
+            if (err)
+                res.send(err);
+
+            res.json({
+                message: 'product updated!'
+            });
+        });
+    })
+
+});
+
+
+router.delete('/:_id', function(req, res, next) {
+
+    console.log(req.params._id)
+
+    product.findById(req.params._id, function(err, product) {
+        if (err) {
+            // handle error
+        }
+
+        product.remove(function(err){
+            if(err){
+                res.send(err)
+            }
+            res.json({
+                message : 'product Deleted'
+            })
+        }); //Removes the document
+    })
+
+
+});
 
 
 

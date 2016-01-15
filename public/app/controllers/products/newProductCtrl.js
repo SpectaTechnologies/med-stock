@@ -28,6 +28,31 @@ angular.module('app')
 
         }
 
+         $scope.availableCompanies = function() {
+            $http.get('/api/companies')
+                .then(function(response) {
+                    $scope.companies = _.map(response.data, function(obj) {
+                        return {
+                            name: obj.company_name,
+                            address: obj.company_address
+                        }
+
+                    })
+                    console.log($scope.companies);
+
+                }, function(err) {
+                    console.log(err)
+                        // called asynchronously if an error occurs
+                        // or server returns response with an error status.
+                });
+        }
+
+
+        $scope.setup = function() {            
+            $scope.availableCompanies();
+        }
+
+        $scope.setup();
 
 
     })

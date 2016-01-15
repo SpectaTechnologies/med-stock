@@ -87,6 +87,19 @@ angular.module('app')
 
         })
 
+        .state('app.products.details', {
+            url: '/:id',
+
+            views: {
+                'content@': {
+                    templateUrl: 'products/editProduct.html',
+                    controller: 'editProductCtrl'
+                }
+            }
+
+        })
+
+
         //  Resources Menu 
 
         .state('app.companies', {
