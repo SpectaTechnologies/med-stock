@@ -44,7 +44,7 @@ router.get('/', function(req, res, next) {
         if (err) {
             return next(err)
         } else {
-            console.log("this is the user list of companies from Product GET: " + company)
+            console.log("this is the user list of companies from company GET: " + company)
 
             res.json(company)
         }
