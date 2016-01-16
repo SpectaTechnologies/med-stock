@@ -8,8 +8,8 @@ gulp.task('js', function() {
     return gulp.src(['public/app/controllers/module.js', 'public/app/controllers/**/*.js'])
         .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
-        //.pipe(ngAnnotate())  /* ngAnnotate  is causing trouble sunddenly , so skipping uglifying for a while
-        //.pipe(uglify())
+        .pipe(ngAnnotate())  // ngAnnotate  is causing trouble sunddenly , so skipping uglifying for a while
+        .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('public/assets'))
 })
