@@ -5,21 +5,19 @@
                 <h3>Welcome, {{currentUser.name}}</h3>
             </div>
         </div>
-    </div>    
+    </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4">
             <h4 align="center">Products</h4>
-            <canvas tc-chartjs-doughnut chart-options="options" chart-data="products" ></canvas>
+            <canvas tc-chartjs-bar chart-options="baroptions" chart-data="bardata"></canvas>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-4">
             <h4 align="center">Resources</h4>
-            <canvas tc-chartjs-doughnut chart-options="options" chart-data="resources" ></canvas>
+            <canvas tc-chartjs-doughnut chart-options="options" chart-data="resources"></canvas>
         </div>
         <div class="col-xs-12 col-md-12 col-md-4">
             <h4 align="center">Sales</h4>
-            <canvas tc-chartjs-doughnut chart-options="options" chart-data="sales" ></canvas>
+            <canvas tc-chartjs chart-type="line" chart-data="linedata" chart-options="lineoptions"></canvas>
         </div>
-    </div>    
+    </div>
 </div>
- 
-
