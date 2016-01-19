@@ -7,7 +7,7 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var app = express();
 
-//app.use(morgan('dev'));
+app.use(morgan('dev'));
 
 app.use('/api/route', router);
 app.use(bodyParser.json()); // support json encoded bodies
