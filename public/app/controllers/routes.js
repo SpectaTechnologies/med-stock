@@ -243,8 +243,39 @@ angular.module('app')
 
         })
 
+        // Settings Menu
 
-        .state('app.settings', {
+        .state('app.password', {
+            url: 'reset-password',
+            views: {
+                'content@': {
+                    templateUrl: 'settings/changePassword.html',                    
+                }
+            }
+
+        })
+
+        .state('app.bug', {
+            url: 'report-a-abug',
+            views: {
+                'content@': {
+                    templateUrl: 'settings/bug.html',                    
+                }
+            }
+
+        })
+
+        .state('app.feedback', {
+            url: 'feedback',
+            views: {
+                'content@': {
+                    templateUrl: 'settings/feedback.html',                    
+                }
+            }
+
+        })
+
+        .state('app.about', {
             url: 'about',
             views: {
                 'content@': {
@@ -254,6 +285,8 @@ angular.module('app')
             }
 
         })
+
+
 
         $locationProvider.html5Mode(true)
 
