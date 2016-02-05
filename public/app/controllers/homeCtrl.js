@@ -1,7 +1,6 @@
 angular.module('app')
-    .controller('HomeCtrl', function($scope, $http, $rootScope) {
+    .controller('HomeCtrl', function($scope, $http) {
         $scope.model = "";
-
 
 
         function setChart(comp, stock, emp) {
