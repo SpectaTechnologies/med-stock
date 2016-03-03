@@ -55,7 +55,7 @@ router.get('/', function(req, res, next) {
 })
 
 router.get('/count', function(req, res, next) {
-
+    console.log("here in the controllrt",req.auth)
     Company.count({
         user_id: req.auth.username
     }, function(err, count) {

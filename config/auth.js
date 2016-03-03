@@ -7,5 +7,8 @@ module.exports = function(req, res, next) {
         console.log("here")
         console.log(req.auth)
     }
+    else{
+    	console.log("no header")
+    }
     next()
 }
