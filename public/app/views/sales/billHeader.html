@@ -8,10 +8,9 @@
     </div>        
     <div class="row">
         <div class="col-md-offset-3 col-xs-12 col-sm-12 col-md-6">            
-            <h1>Sanepharma Private Limited</h1>
-            <p>222, Lower Ground Floor,Kailash Hills</p>            
-            <p>East of Kailash</p>
-            <p>New Delhi - 110048</p>
+            <input ng-model="bill_header_title" type="text" class="bill-title" autofocus>
+            <input ng-model="bill_header_subtitle" type="text" class="bill-subtitle">                        
+            <button ng-click="saveBillHeader()" type="button" class="btn btn-success btn-block"><span class="glyphicon glyphicon-floppy-disk"></span>  Save</button>
         </div>
     </div>        
 </div>

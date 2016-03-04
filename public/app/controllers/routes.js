@@ -208,7 +208,8 @@ angular.module('app')
             url: 'sales/billheader',
             views: {
                 'content@': {
-                    templateUrl: 'sales/billHeader.html'
+                    templateUrl: 'sales/billHeader.html',
+                    controller: 'billHeaderCtrl'
 
 
                 }

@@ -13,3 +13,21 @@ p {
 .delete {
     color: red;
 }
+
+
+/*Sales- Bill Header*/
+
+.bill-title{
+	font-size: 38px;
+	border:none;	
+	margin-bottom: 20px;
+}
+.bill-subtitle{
+	font-size: 22px;
+	border: none;
+}
+.bill-title:focus, .bill-subtitle:focus{	
+	outline :none;
+	border-bottom: 1px solid #212121;
+}
+
