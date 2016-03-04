@@ -1,5 +1,6 @@
 /node_modules
-public/assets/app.js
+/public/assets/app.js
+
 # vim swap files
 *.swp
 *.swo
