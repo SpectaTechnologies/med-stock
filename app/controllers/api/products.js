@@ -105,7 +105,7 @@ router.delete('/:_id', function(req, res, next) {
 
     console.log(req.params._id)
 
-    product.findById(req.params._id, function(err, product) {
+    Product.findById(req.params._id, function(err, product) {
         if (err) {
             // handle error
         }

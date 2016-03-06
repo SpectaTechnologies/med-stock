@@ -47,11 +47,25 @@ angular.module('app')
         }
 
         $scope.setup();
+        
+        $scope.productLimit = 3;
+        $scope.getNumber = function(num) {
+            return new Array(num);   
+        }
+
+        $scope.increaseLimit = function(){
+
+            $scope.productLimit = $scope.productLimit + 2;
+            console.log($scope.productLimit)
+        }
+        $scope.decreaseLimit = function(){
+
+            $scope.productLimit = $scope.productLimit - 2;
+            console.log($scope.productLimit)
+        }
 
 
-
-
-        function calendarImplementation() {
+        
             $scope.today = function() {
                 $scope.dt = new Date();
             };
@@ -130,7 +144,7 @@ angular.module('app')
 
                 return '';
             };
-        }
+        
 
 
     })
