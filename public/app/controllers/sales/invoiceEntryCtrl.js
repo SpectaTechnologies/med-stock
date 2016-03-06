@@ -8,7 +8,8 @@ angular.module('app')
                     $scope.model.products = _.map(response.data, function(obj) {
                         return {
                             name: obj.product_name,
-                            code: obj.product_code
+                            code: obj.product_code,
+                            mrp: obj.product_mrp
                         }
 
                     })
@@ -48,89 +49,106 @@ angular.module('app')
 
         $scope.setup();
 
+        $scope.productLimit = 3;
+        $scope.getNumber = function(num) {
+            return new Array(num);
+        }
+
+        $scope.increaseLimit = function() {
+
+            $scope.productLimit = $scope.productLimit + 2;
+            console.log($scope.productLimit)
+        }
+        $scope.decreaseLimit = function() {
+
+            $scope.productLimit = $scope.productLimit - 2;
+            console.log($scope.productLimit)
+        }
 
 
 
-        function calendarImplementation() {
-            $scope.today = function() {
-                $scope.dt = new Date();
-            };
-            $scope.today();
 
-            $scope.clear = function() {
-                $scope.dt = null;
-            };
+        //Calendar functions
 
-            /* // Disable weekend selection
-             $scope.disabled = function(date, mode) {
-                 return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
-             };*/
+        $scope.today = function() {
+            $scope.dt = new Date();
+        };
+        $scope.today();
 
-            $scope.toggleMin = function() {
-                $scope.minDate = $scope.minDate ? null : new Date();
-            };
+        $scope.clear = function() {
+            $scope.dt = null;
+        };
 
-            $scope.toggleMin();
-            $scope.maxDate = new Date(2020, 5, 22);
+        /* // Disable weekend selection
+         $scope.disabled = function(date, mode) {
+             return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+         };*/
 
-            $scope.open1 = function() {
-                $scope.popup1.opened = true;
-            };
+        $scope.toggleMin = function() {
+            $scope.minDate = $scope.minDate ? null : new Date();
+        };
 
-            $scope.open2 = function() {
-                $scope.popup2.opened = true;
-            };
+        $scope.toggleMin();
+        $scope.maxDate = new Date(2020, 5, 22);
 
-            $scope.setDate = function(year, month, day) {
-                $scope.dt = new Date(year, month, day);
-            };
+        $scope.open1 = function() {
+            $scope.popup1.opened = true;
+        };
 
-            $scope.dateOptions = {
-                formatYear: 'yy',
-                startingDay: 1,
-                showWeeks: false
-            };
+        $scope.open2 = function() {
+            $scope.popup2.opened = true;
+        };
 
-            $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-            $scope.format = $scope.formats[0];
-            $scope.altInputFormats = ['M!/d!/yyyy'];
+        $scope.setDate = function(year, month, day) {
+            $scope.dt = new Date(year, month, day);
+        };
 
-            $scope.popup1 = {
-                opened: false
-            };
+        $scope.dateOptions = {
+            formatYear: 'yy',
+            startingDay: 1,
+            showWeeks: false
+        };
 
-            $scope.popup2 = {
-                opened: false
-            };
+        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+        $scope.format = $scope.formats[0];
+        $scope.altInputFormats = ['M!/d!/yyyy'];
 
-            var tomorrow = new Date();
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            var afterTomorrow = new Date();
-            afterTomorrow.setDate(tomorrow.getDate() + 1);
-            $scope.events = [{
-                date: tomorrow,
-                status: 'full'
-            }, {
-                date: afterTomorrow,
-                status: 'partially'
-            }];
+        $scope.popup1 = {
+            opened: false
+        };
 
-            $scope.getDayClass = function(date, mode) {
-                if (mode === 'day') {
-                    var dayToCheck = new Date(date).setHours(0, 0, 0, 0);
+        $scope.popup2 = {
+            opened: false
+        };
 
-                    for (var i = 0; i < $scope.events.length; i++) {
-                        var currentDay = new Date($scope.events[i].date).setHours(0, 0, 0, 0);
+        var tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        var afterTomorrow = new Date();
+        afterTomorrow.setDate(tomorrow.getDate() + 1);
+        $scope.events = [{
+            date: tomorrow,
+            status: 'full'
+        }, {
+            date: afterTomorrow,
+            status: 'partially'
+        }];
 
-                        if (dayToCheck === currentDay) {
-                            return $scope.events[i].status;
-                        }
+        $scope.getDayClass = function(date, mode) {
+            if (mode === 'day') {
+                var dayToCheck = new Date(date).setHours(0, 0, 0, 0);
+
+                for (var i = 0; i < $scope.events.length; i++) {
+                    var currentDay = new Date($scope.events[i].date).setHours(0, 0, 0, 0);
+
+                    if (dayToCheck === currentDay) {
+                        return $scope.events[i].status;
                     }
                 }
+            }
 
-                return '';
-            };
-        }
+            return '';
+        };
+
 
 
     })

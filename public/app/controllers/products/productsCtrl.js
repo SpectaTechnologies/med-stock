@@ -17,6 +17,18 @@ angular.module('app')
 
         $scope.setup();
 
+         $scope.deleteProduct = function(product_id) {          
+            if (!confirm('Are you sure?')) return;
+            $http.delete('/api/products/'+ product_id)
+                .then(function(response) {
+                    console.log(response)                    
+                    $scope.setup();
 
+                }, function(response) {
+                    console.log(response)
+                    // if error occurs
+                });
+
+        }
 
     })
