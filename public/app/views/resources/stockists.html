@@ -1,33 +1,34 @@
-<div class="container">    
+<div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <a class="btn btn-primary btn-sm pull-left" ui-sref=".new">+ Add New Stockist</a>
         </div>
-        <br/><br/>
+        <br/>
+        <br/>
     </div>
     <table class="table table-hover table-striped table-bordered ">
         <thead>
             <tr>
                 <th>Code</th>
                 <th>Name</th>
-                <th>Area Code</th>                
+                <th>Area Code</th>
                 <th>Opening Balance</th>
-                <th>BST Code</th>                
-                <th>Date</th>                
-                <th>Edit</th>                
+                <th>BST Code</th>
+                <th>Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="stockist in model | filter:searchProducts">
                 <td>{{stockist.stockist_code}}</td>
-                <td>{{stockist.stockist_name}}</td>            
-                <td>{{stockist.stockist_areacode}}</td>            
-                <td>{{stockist.stockist_openingbalance}}</td>            
-                <td>{{stockist.stockist_bstcode}}</td>            
+                <td>{{stockist.stockist_name}}</td>
+                <td>{{stockist.stockist_areacode}}</td>
+                <td>{{stockist.stockist_openingbalance}}</td>
+                <td>{{stockist.stockist_bstcode}}</td>
                 <td>{{stockist.date}}</td>
-                
-                <td><a class="btn btn-default" ui-sref=".details({id:value.device_id})"><span class="glyphicon glyphicon-pencil"></span>  Edit</a></td>
+                <td><a href="" ui-sref=".details({id:stockist._id})"><span class="glyphicon glyphicon-pencil edit"></span></a></td>
+                <td><a href="" ng-click="deleteStockist(stockist._id)"><span class="glyphicon glyphicon-trash delete"></span></a></td>
         </tbody>
     </table>
 </div>
-

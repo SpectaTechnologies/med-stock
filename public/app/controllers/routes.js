@@ -8,11 +8,12 @@ angular.module('app')
                 url: '/',
                 views: {
                     'header': {
-                        templateUrl: '/nav.html'
+                        templateUrl: '/nav.html',
+                        controller: 'navCtrl'
                     },
                     'content': {
                         templateUrl: '/login.html',
-                        controller: 'LoginCtrl'
+                        controller: 'loginCtrl'
                     }
                 }
             })
@@ -21,11 +22,12 @@ angular.module('app')
             url: 'login',
             views: {
                 'header': {
-                    templateUrl: '/nav.html'
+                    templateUrl: '/nav.html',
+                    controller: 'navCtrl'
                 },
                 'content': {
                     templateUrl: '/login.html',
-                    controller: 'LoginCtrl'
+                    controller: 'loginCtrl'
 
                 }
             }
@@ -36,7 +38,7 @@ angular.module('app')
             views: {
                 'content@': {
                     templateUrl: 'register.html',
-                    controller: 'RegisterCtrl'
+                    controller: 'registerCtrl'
                 }
             }
 
@@ -48,22 +50,12 @@ angular.module('app')
             views: {
                 'content@': {
                     templateUrl: 'users/home.html',
-                    controller: 'HomeCtrl'
+                    controller: 'homeCtrl'
                 }
             }
 
         })
-
-        .state('app.home.vehicles', {
-            url: '/vehicles/new',
-            views: {
-                'content@': {
-                    templateUrl: 'vehicles/newVehicle.html',
-                    controller: 'VehiclesNewInfoCtrl'
-                }
-            }
-
-        })
+       
 
         .state('app.products', {
             url: 'products',
@@ -162,6 +154,18 @@ angular.module('app')
 
         })
 
+         .state('app.stockists.details', {
+            url: '/:id',
+
+            views: {
+                'content@': {
+                    templateUrl: 'resources/editStockst.html',
+                    controller: 'editStockistCtrl'
+                }
+            }
+
+        })
+
 
         .state('app.employees', {
             url: 'resources/employees',
@@ -182,6 +186,18 @@ angular.module('app')
                 'content@': {
                     templateUrl: 'resources/newEmployee.html',
                     controller: 'newEmployeeCtrl'
+                }
+            }
+
+        })
+
+        .state('app.employees.details', {
+            url: '/:id',
+
+            views: {
+                'content@': {
+                    templateUrl: 'resources/editEmployees.html',
+                    controller: 'editEmployeesCtrl'
                 }
             }
 
@@ -280,8 +296,7 @@ angular.module('app')
             url: 'about',
             views: {
                 'content@': {
-                    templateUrl: 'settings/about.html',
-                    controller: 'HomeCtrl'
+                    templateUrl: 'settings/about.html',                    
                 }
             }
 

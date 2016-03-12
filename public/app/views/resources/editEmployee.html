@@ -1,0 +1,36 @@
+<div class="container">    
+    <div class="top-buffer row">
+        <div class="col-md-4">
+            <input type="text" ng-model="model.employee_code" placeholder="employee Code" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="model.employee_name" placeholder="employee Name" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="model.employee_areacode" placeholder="Area Code" class="form-control">
+        </div>
+    </div>
+    <div class="top-buffer row">
+        <div class="col-md-4">
+            <input type="text" ng-model="model.employee_address" placeholder="Address" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="model.employee_openingbalance" placeholder="Opening Balance" class="form-control">
+        </div>
+        <div class="col-md-4">
+            <input type="text" ng-model="model.employee_bstcode" placeholder="BST Code" class="form-control">
+        </div>
+    </div>    
+    <div class="top-buffer row">
+        <div class="col-md-offset-8 col-md-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary btn-block">Reset</button>
+                </div>
+                <div class="col-md-6">
+                    <button ng-click="updateEmployeeDetails()" type="button" class="btn btn-success btn-block"><span class="glyphicon glyphicon-floppy-disk"></span>  Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

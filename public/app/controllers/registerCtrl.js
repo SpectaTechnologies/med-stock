@@ -1,5 +1,5 @@
 angular.module('app')
-.controller('RegisterCtrl',function($scope,UserSvc ,$location){
+.controller('registerCtrl',function($scope,UserSvc ,$location){
 	$scope.register = function(name,username,password){
 		UserSvc.register(name,username,password)
 		.then(function(response){			
