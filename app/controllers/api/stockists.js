@@ -67,4 +67,28 @@ router.get('/count', function(req, res, next) {
 
 })
 
+
+
+router.delete('/:_id', function(req, res, next) {
+
+    console.log(req.params._id)
+
+    Stockist.findById(req.params._id, function(err, stockist) {
+        if (err) {
+            // handle error
+        }
+
+        stockist.remove(function(err) {
+            if (err) {
+                res.send(err)
+            }
+            res.json({
+                message: 'Stockist Deleted'
+            })
+        }); //Removes the document
+    })
+
+
+});
+
 module.exports = router
