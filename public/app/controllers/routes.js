@@ -159,7 +159,7 @@ angular.module('app')
 
             views: {
                 'content@': {
-                    templateUrl: 'resources/editStockst.html',
+                    templateUrl: 'resources/editStockist.html',
                     controller: 'editStockistCtrl'
                 }
             }
