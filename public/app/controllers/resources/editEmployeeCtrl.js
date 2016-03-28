@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('editEmployeesCtrl', function($scope, $http, $location, $stateParams) {
+    .controller('editEmployeeCtrl', function($scope, $http, $location, $stateParams) {
 
 
         $scope.setup = function() {

@@ -196,8 +196,8 @@ angular.module('app')
 
             views: {
                 'content@': {
-                    templateUrl: 'resources/editEmployees.html',
-                    controller: 'editEmployeesCtrl'
+                    templateUrl: 'resources/editEmployee.html',
+                    controller: 'editEmployeeCtrl'
                 }
             }
 
