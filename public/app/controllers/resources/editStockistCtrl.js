@@ -1,10 +1,10 @@
 angular.module('app')
-    .controller('editCompanyCtrl', function($scope, $http, $location, $stateParams) {
+    .controller('editStockistCtrl', function($scope, $http, $location, $stateParams) {
 
 
         $scope.setup = function() {
             console.log($stateParams)
-            $http.get('/api/companies/' + $stateParams.id)
+            $http.get('/api/stockists/' + $stateParams.id)
                 .then(function(response) {
                     $scope.model = response.data;
                     console.log($scope.model)
@@ -15,14 +15,14 @@ angular.module('app')
 
         }
 
-        $scope.updateCompanyDetails = function() {
-            $http.put('/api/companies/' + $stateParams.id, {
-                    company_code: $scope.model.company_code,
-                    company_name: $scope.model.company_name,
-                    company_areacode: $scope.model.company_areacode,
-                    company_address: $scope.model.company_address,
-                    company_openingbalance: $scope.model.company_openingbalance,
-                    company_bstcode: $scope.model.company_bstcode,
+        $scope.updateStockistDetails = function() {
+            $http.put('/api/stockists/' + $stateParams.id, {
+                    stockist_code: $scope.model.stockist_code,
+                    stockist_name: $scope.model.stockist_name,
+                    stockist_areacode: $scope.model.stockist_areacode,
+                    stockist_address: $scope.model.stockist_address,
+                    stockist_openingbalance: $scope.model.stockist_openingbalance,
+                    stockist_bstcode: $scope.model.stockist_bstcode,
 
                 })
                 .then(function(response) {

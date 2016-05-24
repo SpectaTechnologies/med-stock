@@ -159,7 +159,7 @@ angular.module('app')
 
             views: {
                 'content@': {
-                    templateUrl: 'resources/editStockst.html',
+                    templateUrl: 'resources/editStockist.html',
                     controller: 'editStockistCtrl'
                 }
             }
@@ -196,8 +196,8 @@ angular.module('app')
 
             views: {
                 'content@': {
-                    templateUrl: 'resources/editEmployees.html',
-                    controller: 'editEmployeesCtrl'
+                    templateUrl: 'resources/editEmployee.html',
+                    controller: 'editEmployeeCtrl'
                 }
             }
 
