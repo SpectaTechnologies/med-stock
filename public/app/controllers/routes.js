@@ -12,8 +12,8 @@ angular.module('app')
                         controller: 'navCtrl'
                     },
                     'content': {
-                        templateUrl: '/login.html',
-                        controller: 'loginCtrl'
+                        templateUrl: '/landing.html'
+                        
                     }
                 }
             })
@@ -25,7 +25,7 @@ angular.module('app')
                     templateUrl: '/nav.html',
                     controller: 'navCtrl'
                 },
-                'content': {
+                'content@': {
                     templateUrl: '/login.html',
                     controller: 'loginCtrl'
 
